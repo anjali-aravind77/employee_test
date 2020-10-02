@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "EmployeePay"
+    }
+  },
+  "defaultProject": "EmployeePay",
+  "cli": {
+    "analytics": "c94ecf4a-880f-4247-bbac-9efc36979a7b"
+  }
 }

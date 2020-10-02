@@ -1,0 +1,67 @@
+
+        <div class="container">
+          <div class="row">
+          <div class="col"> 
+      
+          </div>
+      <div class="col">
+      
+          <h1>EMPLOYEE REGISTRATION</h1>
+      </div>
+      </div>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <div class="jumbotron">
+          <!-- {{name}}
+          {{accno}}
+          {{pwd}} -->
+          <div class="form-group">
+              <label for="nameid">Name</label>
+              <input formControlName="username" type="text" name="username" class="form-control" id="nameid" aria-describedby="emailHelp">
+             
+              <div *ngIf="getError('username')" class="error"> Name is invalid </div> </div>
+      
+          <div class="form-group">
+            <label for="pwd">Password</label>
+            <input formControlName="password" type="password" name="password" class="form-control" id="pwd1">
+         
+          <div *ngIf="getError('password')" class="error"> password is required </div> </div>
+
+          <div class="form-group">
+            <label for="empid">Employee ID</label>
+            <input formControlName="empid" type="text" name="empid" class="form-control" id="empid">
+         
+          <div *ngIf="getError('empid')" class="error"> employee id is required </div> </div>
+
+          <div class="form-group">
+            <label for="emailid">Email ID</label>
+            <input formControlName="emailid" type="text" name="emailid" class="form-control" id="emailid">
+         
+          <div *ngIf="getError('emailid')" class="error"> email id is required </div> </div>
+
+          <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input formControlName ="phone" type="text" name="number" class="form-control" id="phone">
+           
+            <div *ngIf="getError('phone')" class="error"> phone number is required </div> </div>
+
+            
+          <div class="form-group">
+            <label for="designation">Designation</label>
+            <input formControlName ="designation" type="text" name="designation" class="form-control" id="designation">
+         
+          <div *ngIf="getError('designation')" class="error"> Designation is required </div> </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input formControlName ="address" type="text" height="30" name="address" class="form-control" id="address"> 
+            
+            
+          <div *ngIf="getError('address')" class="error"> Address is required </div> </div>
+        
+          <button type="submit" class="btn btn-primary" value="Submit">Register</button>
+       
+      </div>
+
+  </form>
+
+<a routerLink="">Back to Login</a>
