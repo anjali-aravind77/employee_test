@@ -2,3 +2,10 @@
 .error {
     color: red;
 }
+.bg {
+    background-image: url("images/img2.jpg");
+}
+
+.jumbo-color {
+    background-color: #fff0f0;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-welcome',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-
-  constructor() { }
+ username;
+  constructor(public dataservice:DataService, private router:Router) { }
 
   ngOnInit(): void {
   }
-
+ logout() {
+  this.router.navigateByUrl("");
+  //  this.dataservice.logout()
+  //  .subscribe(data => {
+  //    this.router.navigateByUrl("");
+  //  });
+ }
 }

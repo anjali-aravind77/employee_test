@@ -13,10 +13,11 @@
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">User Name</h6>
                         </label> <input class="mb-4" type="text" formControlName="username" name="username" placeholder="Enter username"> </div>
-                    <div class="row px-3"> <label class="mb-1">
+                        <div *ngIf="getError('username')" class="error"> enter a valid username </div>
+                        <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Password</h6>
                         </label> <input type="password"  formControlName="password" name="password" placeholder="Enter password"> </div>
-                    
+                        <div *ngIf="getError('password')" class="error"> password required </div>
                     <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center" >Login</button> </div>
                     </form>
                 </div>

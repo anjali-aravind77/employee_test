@@ -17,6 +17,10 @@ export class LoginComponent implements OnInit {
     password :['',[Validators.required]]
   });
 
+  getError(field){
+    return (this.loginForm.get(field).errors)&& (this.loginForm.get(field).dirty || this.loginForm.get(field).touched);
+  }
+
   ngOnInit(): void {
   }
   login() {
@@ -26,7 +30,7 @@ export class LoginComponent implements OnInit {
         .subscribe((data:any) => {
           if(data) {
             
-            this.router.navigateByUrl("welcome");
+            this.router.navigateByUrl("logout");
           }
         },(data) => {
           alert(data.error.message);

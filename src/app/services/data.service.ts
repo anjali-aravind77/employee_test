@@ -16,7 +16,7 @@ export class DataService {
     const data = {
       username,password,empid,emailid,phone,designation,address
     }
-    return this.http.post("http://localhost:3000/register", data);
+    return this.http.post("http://localhost:3000/employeeregister", data);
     
   }
 
@@ -26,5 +26,9 @@ export class DataService {
     }
     return this.http.post("http://localhost:3000/login", data, options);
     
+  }
+  logout() {
+    
+    return this.http.post("http://localhost:3000/logout", options);
   }
 }

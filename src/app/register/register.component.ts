@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
   getError(er_field){
     return (this.registerForm.get(er_field).touched || this.registerForm.get(er_field).dirty)&& this.registerForm.get(er_field).errors;
   }
-  register(){
+  employeeregister(){
     if(this.registerForm.valid){
       this.dataService.register(this.registerForm.value.username,
         this.registerForm.value.password,

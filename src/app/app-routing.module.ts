@@ -13,10 +13,10 @@ const routes: Routes = [
     path:'login', component:LoginComponent
   },
   {
-    path:'register', component:RegisterComponent
+    path:'employeeregister', component:RegisterComponent
   },
   {
-    path:'welcome', component:WelcomeComponent
+    path:'logout', component:WelcomeComponent
   }
 ];
 
